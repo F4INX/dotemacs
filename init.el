@@ -133,6 +133,12 @@
 ;
 ; Show line numbers globally
 (global-display-line-numbers-mode)
+;
+; Show date and time in status bar (french format)
+; (setq display-time-24hr-format t)
+; (setq display-time-day-and-date t)
+(setq display-time-format "%a %e %b %H:%M")
+(display-time)
 ; ----------------------------------------------------------------------
 
 ; ----------------------------------------------------------------------
