@@ -47,6 +47,7 @@
 ; https://gist.github.com/Ladicle/119c57fc97439c1b103f7847aa03be52
 ; https://www.reddit.com/r/emacs/comments/scjjs4/how_tf_do_you_enable_line_numbering/
 ; https://wikemacs.org/wiki/Smex
+; http://xahlee.info/emacs/emacs/emacs_hippie_expand_setup.html
 ; ----------------------------------------------------------------------
 
 ; ----------------------------------------------------------------------
