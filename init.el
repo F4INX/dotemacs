@@ -149,6 +149,9 @@
 ;; Visible instead of audible bell
 ;; cf. David Cobac - http://clx.anet.fr/spip/article.php3?id_article=181
 (setq visible-bell t)
+;;
+;; Short yes or no questions
+(setopt use-short-answers t)
 ;; ----------------------------------------------------------------------
 
 ;; ----------------------------------------------------------------------
