@@ -1,0 +1,6 @@
+.cache/
+auto-save-list/
+elpa/
+init.el~
+projectile-bookmarks.eld
+smex-items
