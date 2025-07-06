@@ -131,22 +131,35 @@
   )
 ; ----------------------------------------------------------------------
 
-; ----------------------------------------------------------------------
-; Display
-;
-; Show line and column number
+;; ----------------------------------------------------------------------
+;; Interface and display
+;;
+;; Show line and column number
 (column-number-mode 1)
 (line-number-mode 1)
-;
-; Show line numbers globally
+;;
+;; Show line numbers globally
 (global-display-line-numbers-mode)
-;
-; Show date and time in status bar (french format)
-; (setq display-time-24hr-format t)
-; (setq display-time-day-and-date t)
+;;
+;; Show date and time in status bar (french format)
+;; (setq display-time-24hr-format t)
+;; (setq display-time-day-and-date t)
 (setq display-time-format "%a %e %b %H:%M")
 (display-time)
-; ----------------------------------------------------------------------
+;; Visible instead of audible bell
+;; cf. David Cobac - http://clx.anet.fr/spip/article.php3?id_article=181
+(setq visible-bell t)
+;; ----------------------------------------------------------------------
+
+;; ----------------------------------------------------------------------
+;; Misc
+;;					;
+;; Put all backup files in a single folder
+(setq backup-directory-alist
+     '(("." . "~/.emacs.d/backup-files/")))
+;; Do backup files
+(setq make-backup-files t)
+;; ----------------------------------------------------------------------
 
 ; ----------------------------------------------------------------------
 ; Projectile
