@@ -158,6 +158,20 @@
 ;;
 ;; Short yes or no questions
 (setopt use-short-answers t)
+;;
+;; Overline keywords like FIXME, WARNING, ATTENTION, CRITICAL, and TODO
+;; cf. http://members.iinet.net.au/~bethandmark/elisp/highlight-fixmes-mode.el
+;; cf. http://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
+;; cf. http://www.emacswiki.org/emacs/AddKeywords
+(let ((words '("FIXME" "WARNING" "ATTENTION" "CRITICAL" "TODO"))
+      (modes '(c-mode c++-mode emacs-lisp-mode vhdl-mode text-mode
+	       latex-mode python-mode julia-mode)))
+  (dolist (word words)
+    (dolist (mode modes)
+      (let ((str (format "\\<\\(%s\\)" word)))
+	(font-lock-add-keywords
+	      mode
+	      (list (list str 1 font-lock-warning-face t)))))))
 ;; ----------------------------------------------------------------------
 
 ;; ----------------------------------------------------------------------
