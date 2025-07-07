@@ -179,9 +179,15 @@
 ; ----------------------------------------------------------------------
 
 ;; ----------------------------------------------------------------------
-;; Julia mode + terminal settings
+;; Julia mode
 (use-package julia-mode
   :ensure t)
+(use-package julia-repl
+  :ensure t)
+;; ----------------------------------------------------------------------
+
+;; ----------------------------------------------------------------------
+;; Terminal settings
 (use-package term
   :bind (:map term-raw-map ("C-c y" . term-paste)))
 ;; ----------------------------------------------------------------------
@@ -192,7 +198,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(julia-repl which-key treemacs smex projectile julia-mode company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
