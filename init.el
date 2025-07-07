@@ -202,8 +202,12 @@
 ;; Julia mode
 (use-package julia-mode
   :ensure t)
-(use-package julia-repl
+(use-package eat
   :ensure t)
+(use-package julia-repl
+  :ensure t
+  :config
+  (julia-repl-set-terminal-backend 'eat))
 ;; ----------------------------------------------------------------------
 
 ;; ----------------------------------------------------------------------
