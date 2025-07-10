@@ -82,17 +82,6 @@
   (which-key-mode t))
 ; ----------------------------------------------------------------------
 
-; ----------------------------------------------------------------------
-; Smex + ido
-(unless (package-installed-p 'ido)
-  (package-install 'ido))
-(unless (package-installed-p 'smex)
-  (package-install 'smex))
-(use-package smex
-  :init
-  (smex-initialize))
-; ----------------------------------------------------------------------
-
 ;; ----------------------------------------------------------------------
 ;; Magit
 (use-package magit
