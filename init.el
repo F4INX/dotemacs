@@ -218,6 +218,11 @@
 
 ;; ----------------------------------------------------------------------
 ;; Printing
+;; Raw printing functions
+(setq ps-lpr-command "C:/Program Files/gs/gs10.05.1/bin/gswin64c.exe")
+(setq ps-lpr-switches '("-q" "-dNOPAUSE" "-dBATCH" "-sDEVICE=mswinpr2"))
+(setq ps-printer-name t)
+;; printing.el
 (use-package printing
   :config
   (when (equal system-type 'windows-nt)
