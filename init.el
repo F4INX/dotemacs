@@ -216,6 +216,19 @@
   :bind (:map term-raw-map ("C-c y" . term-paste)))
 ;; ----------------------------------------------------------------------
 
+;; ----------------------------------------------------------------------
+;; Printing
+(use-package printing
+  :config
+  (when (equal system-type 'windows-nt)
+    (setq pr-gv-command "C:/Program Files/SumatraPDF/SumatraPDF.exe")
+    (setq pr-gs-command "C:/Program Files/gs/gs10.05.1/bin/gswin64c.exe")
+    (setq pr-gs-switches '("-q" "-dNOPAUSE" "-dBATCH"))
+    (setq pr-faces-p t)
+    (setq pr-print-using-ghostscript t))
+  (pr-update-menus t))
+;; ----------------------------------------------------------------------
+
 ; ----------------------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
