@@ -148,6 +148,11 @@
 ;; Short yes or no questions
 (setopt use-short-answers t)
 ;;
+;; Improved automatic completion of text (M-/ and C-M-/)
+(with-eval-after-load "dabbrev"
+  (global-set-key [remap dabbrev-expand] 'hippie-expand)
+  (global-set-key (kbd "C-c /") 'dabbrev-expand))
+;;
 ;; Overline keywords like FIXME, WARNING, ATTENTION, CRITICAL, and TODO
 ;; cf. http://members.iinet.net.au/~bethandmark/elisp/highlight-fixmes-mode.el
 ;; cf. http://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html
