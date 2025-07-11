@@ -228,6 +228,16 @@
   (pr-update-menus t))
 ;; ----------------------------------------------------------------------
 
+;; ----------------------------------------------------------------------
+;; AI assistant
+;;
+(use-package gptel
+  :ensure t
+  :config
+  (setq gptel-model 'claude-3.5-sonnet  ; Max supported in free plan
+      gptel-backend (gptel-make-gh-copilot "Copilot")))
+;; ----------------------------------------------------------------------
+
 ; ----------------------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
