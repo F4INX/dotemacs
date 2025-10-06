@@ -54,7 +54,8 @@
 ; Melpa packages
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/")
+	     '("nongnu" . "https://elpa.nongnu.org/nongnu/"))
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
