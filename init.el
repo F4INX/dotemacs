@@ -239,6 +239,16 @@
       gptel-backend (gptel-make-gh-copilot "Copilot")))
 ;; ----------------------------------------------------------------------
 
+;; ----------------------------------------------------------------------
+;; Markdown mode
+(use-package markdown-mode
+  :ensure t
+  :mode ("README\\.md\\'" . gfm-mode)
+  :init (setq markdown-command "multimarkdown")
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do)))
+;; ----------------------------------------------------------------------
+
 ; ----------------------------------------------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -246,8 +256,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(all-the-icons-dired all-the-icons-ivy company eat gptel julia-mode
-			 julia-repl magit projectile smex treemacs)))
+   '(all-the-icons-dired all-the-icons-ivy company easy-jekyll eat gptel
+			 julia-mode julia-repl magit markdown-mode
+			 projectile smex treemacs)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
